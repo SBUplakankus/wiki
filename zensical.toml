@@ -11,6 +11,28 @@ edit_uri = "edit/main/docs/"
 
 nav = [
   { Home = "index.md" },
+  { "Getting Started" = [
+    { Installation = "getting-started/installation.md" },
+    { Quickstart = "getting-started/quickstart.md" },
+  ] },
+  { Guides = [
+    { Emulator = [
+      { Library = "guides/library.md" },
+      { "Manage Xenia" = "guides/manage-xenia.md" },
+      { "Xenia Settings" = "guides/xenia-settings.md" },
+      { Mousehook = "guides/mousehook.md" },
+    ] },
+    { "Game Data" = [
+      { Content = "guides/content.md" },
+      { Patches = "guides/patches.md" },
+      { "Profiles & Saves" = "guides/profiles-saves.md" },
+    ] },
+    { "App Integration" = [
+      { "Steam Shortcuts" = "guides/steam-shortcuts.md" },
+      { "BigScreen Mode" = "guides/bigscreen.md" },
+      { "Manager Settings" = "guides/manager-settings.md" },
+    ] },
+  ] },
   { BigScreen = [
     { Overview = "big-screen/overview.md" },
     { "Design Philosophy" = "big-screen/design-philosophy.md" },
@@ -28,6 +50,11 @@ nav = [
       { Gallery = "big-screen/gallery-deep-dive.md" },
     ] },
     { Glossary = "big-screen/glossary.md" },
+  ] },
+  { Help = [
+    { Troubleshooting = "help/troubleshooting.md" },
+    { FAQ = "help/faq.md" },
+    { Development = "help/development.md" },
   ] },
 ]
 
