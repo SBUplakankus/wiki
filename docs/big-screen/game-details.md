@@ -22,7 +22,7 @@ Hints refresh on every pane change. The X hint names the pane's X action. The A 
 
 Unlocked-over-total plus gamerscore counters. Sort by completion, gamerscore, or name. Empty state with zeroed counters when the game has none.
 
-| ![Game Details - Achievements Pane](../assets/Game_Details_Achievements.png){ data-gallery="details" } |
+| ![Game Details - Achievements Pane](../assets/bigscreen/Game_Details_Achievements.png){ data-gallery="details" } |
 |---|
 | Achievements |
 
@@ -30,7 +30,7 @@ Unlocked-over-total plus gamerscore counters. Sort by completion, gamerscore, or
 
 The game's own folder grid in the same geometry as Gallery. Activate opens the shared viewer over the pane rows. See Gallery.
 
-| ![Game Details - Screenshots Pane](../assets/Game_Details_Screens.png){ data-gallery="details" } |
+| ![Game Details - Screenshots Pane](../assets/bigscreen/Game_Details_Screens.png){ data-gallery="details" } |
 |---|
 | Screenshots |
 

@@ -8,7 +8,7 @@ Screenshots across installed versions, gridded as thumbnails and viewed full res
 
 ## Grid Contents
 
-| ![Gallery - Thumbnail Grid](../assets/Gallery.jpg){ data-gallery="screenshots" } |
+| ![Gallery - Thumbnail Grid](../assets/bigscreen/Gallery.jpg){ data-gallery="screenshots" } |
 |---|
 | Thumbnail Grid |
 
@@ -39,7 +39,7 @@ Fixed columns of uniform 16:9 cells. Thumbnails decode smaller than full resolut
 
 One full-resolution image alive at a time, thumbnail fallback when unreadable. Left and Right step with gallery selection in sync, Back closes. Own opaque backdrop.
 
-| ![Gallery - Screenshot Viewer](../assets/Screenshot_Viewer.jpg){ data-gallery="screenshots" } |
+| ![Gallery - Screenshot Viewer](../assets/bigscreen/Screenshot_Viewer.jpg){ data-gallery="screenshots" } |
 |---|
 | Screenshot Viewer |
 

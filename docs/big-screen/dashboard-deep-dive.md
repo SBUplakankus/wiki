@@ -14,11 +14,11 @@ Profile chip on the left, network, battery, and clock on the right. Selecting th
 
 Recent games first, most recently played first. Moving along the row grows the focused card while neighbours settle, keeping total row width constant so the layout never jumps. Selection against no selection:
 
-| ![Dashboard - Game Selected](../assets/Dashboard_Box_Art.jpg){ data-gallery="dashboard" } |
+| ![Dashboard - Game Selected](../assets/bigscreen/Dashboard_Box_Art.jpg){ data-gallery="dashboard" } |
 |---|
 | Game Selected |
 
-| ![Dashboard - No Game Selected](../assets/Dashboard_No_Selection.jpg){ data-gallery="dashboard" } |
+| ![Dashboard - No Game Selected](../assets/bigscreen/Dashboard_No_Selection.jpg){ data-gallery="dashboard" } |
 |---|
 | No Game Selected |
 
@@ -28,15 +28,15 @@ Confirm launches the focused game. Details opens its page. An empty library show
 
 The backdrop follows the selected game. Picking a new card crossfades the artwork instead of swapping it: the old art fades out, the new art fades in, and a newer selection cancels whatever is still fading. With no art to show, the backdrop falls back to the configured gradient or solid colour. A vignette darkens the edges over images.
 
-| ![Dashboard - Solid Background](../assets/Solid_BG.png){ data-gallery="settings" } |
+| ![Dashboard - Solid Background](../assets/bigscreen/Solid_BG.png){ data-gallery="settings" } |
 |---|
 | Solid Background |
 
-| ![Dashboard - Linear Gradient Background](../assets/Linear_BG.png){ data-gallery="settings" } |
+| ![Dashboard - Linear Gradient Background](../assets/bigscreen/Linear_BG.png){ data-gallery="settings" } |
 |---|
 | Linear Gradient Background |
 
-| ![Dashboard - Radial Gradient Background](../assets/Radial_BG.png){ data-gallery="settings" } |
+| ![Dashboard - Radial Gradient Background](../assets/bigscreen/Radial_BG.png){ data-gallery="settings" } |
 |---|
 | Radial Gradient Background |
 

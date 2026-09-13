@@ -64,11 +64,11 @@ Stats come from the profile file first with the per-game file as fallback. Score
 
 Top to bottom: profile management with one status line per installed version, library layout, card artwork, clock format, session toggles, background and appearance controls with the image picker, one row per connected controller, and Xbox version and resolution rows only when a system config file exists.
 
-| ![Settings - Theme Preferences](../assets/Theme_Settings.png){ data-gallery="settings" } |
+| ![Settings - Theme Preferences](../assets/bigscreen/Theme_Settings.png){ data-gallery="settings" } |
 |---|
 | Theme Preferences |
 
-| ![Settings - User Preferences](../assets/Pref_Settings.png){ data-gallery="settings" } |
+| ![Settings - User Preferences](../assets/bigscreen/Pref_Settings.png){ data-gallery="settings" } |
 |---|
 | User Preferences |
 

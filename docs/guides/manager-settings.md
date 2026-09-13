@@ -6,10 +6,7 @@ icon: lucide/palette
 
 The Settings page configures Xenia Manager itself (not the emulator - that is [Xenia Settings](xenia-settings.md)). Settings persist to `Config/config.json` (with an automatic `config.json.backup`).
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/manager-settings.png`
-    **Capture:** Manager Settings page showing General / UI / Emulator / Update sections.
-    **Replace with:** `![Manager Settings](assets/images/manager-settings.png)`
+![Manager Settings](../assets/desktop/Manager_Settings.png)
 
 ---
 
@@ -99,10 +96,7 @@ When **Manager update available** is flagged, follow the prompt or reinstall fro
 
 ## About Page
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/about-page.png`
-    **Capture:** About page with version, links, credits.
-    **Replace with:** `![About Page](assets/images/about-page.png)`
+![About Page](../assets/desktop/About_Page.png)
 
 Shows the Manager version, links to releases/issues/wiki, license (BSD-3), and credits for contributors, translators, research references, and libraries. Use the version string here verbatim when filing bug reports.
 

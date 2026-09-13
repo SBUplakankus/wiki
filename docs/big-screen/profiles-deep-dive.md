@@ -10,7 +10,7 @@ Two screens over one per-version profile store. The picker selects. Management e
 
 Opened from the profile icon at the top left of the dashboard, displays the list of profiles for the user to choose from.
 
-| ![Profiles - Profile Picker](../assets/Profile_Selection.png){ data-gallery="profiles" } |
+| ![Profiles - Profile Picker](../assets/bigscreen/Profile_Selection.png){ data-gallery="profiles" } |
 |---|
 | Profile Picker |
 
@@ -18,7 +18,7 @@ Opened from the profile icon at the top left of the dashboard, displays the list
 
 Accessed through the profile picker, the manager allows you to modify, delete and create new profiles for the current Xenia version you are using. Does not save automatically so a confirmation modal appears if you try to back out with unsaved changes.
 
-| ![Profiles - Manage Profiles](../assets/Manage_Profiles.png){ data-gallery="profiles" } |
+| ![Profiles - Manage Profiles](../assets/bigscreen/Manage_Profiles.png){ data-gallery="profiles" } |
 |---|
 | Manage Profiles |
 

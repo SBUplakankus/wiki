@@ -6,10 +6,7 @@ icon: lucide/monitor
 
 BigScreen is the fullscreen, controller-friendly launcher for TV / couch use. It is a separate application project (`XeniaManager.BigScreen`) sharing the same core library, library data (`Config/games.json`), and emulator installs as the desktop app.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/bigscreen-mode.png`
-    **Capture:** BigScreen home screen with game grid focused, fullscreen.
-    **Replace with:** `![BigScreen mode](assets/images/bigscreen-mode.png)`
+![BigScreen mode](../assets/bigscreen/Bigscreen_Mode.png)
 
 ---
 

@@ -12,7 +12,7 @@ A horizontal card strip, top-aligned in a hidden-scrollbar scroller. Box art at 
 
 The scroller centres the selected card on horizontal moves, sort changes, restores, and mouse clicks. An empty collection shows a stub with an icon and message instead of the strip.
 
-| ![Library - Carousel View](../assets/Carousel_Library.jpg){ data-gallery="library" } |
+| ![Library - Carousel View](../assets/bigscreen/Carousel_Library.jpg){ data-gallery="library" } |
 |---|
 | Carousel View |
 
@@ -22,7 +22,7 @@ A two-column grid. The left column is a bordered card holding a vertical list of
 
 The right column is the details panel for the selected game, shown only while a selection exists. The empty stub spans both columns when the collection is empty.
 
-| ![Library - List View](../assets/List_Library.png){ data-gallery="library" } |
+| ![Library - List View](../assets/bigscreen/List_Library.png){ data-gallery="library" } |
 |---|
 | List View |
 

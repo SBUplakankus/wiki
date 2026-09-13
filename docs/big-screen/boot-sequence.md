@@ -29,7 +29,7 @@ Each stage reports progress, holds briefly, and is cancellable between steps. In
 
 The reveal fades the header with the rows rising into place. A minimum splash time keeps fast machines from flashing it.
 
-| ![Boot Sequence - Splash Screen](../assets/Splash_Screen.png){ data-gallery="boot" } |
+| ![Boot Sequence - Splash Screen](../assets/bigscreen/Splash_Screen.png){ data-gallery="boot" } |
 |---|
 | Splash Screen |
 

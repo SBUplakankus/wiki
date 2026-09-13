@@ -6,10 +6,7 @@ icon: lucide/save
 
 Xenia (the emulator) has its own Xbox 360-style **profile** (gamertag container) and per-game **saves**. Xenia Manager adds import, export, editing, and automatic backups on top - plus XUID-aware save handling so saves survive profile moves.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/manage-profiles.png`
-    **Capture:** Manage Profiles window with profile list, Import/Export/Edit buttons.
-    **Replace with:** `![Manage Profiles](assets/images/manage-profiles.png)`
+![Manage Profiles](../assets/desktop/Manage_Profiles.png)
 
 ---
 

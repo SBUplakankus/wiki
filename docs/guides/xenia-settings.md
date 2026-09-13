@@ -6,10 +6,7 @@ icon: lucide/sliders-horizontal
 
 Xenia's configuration is a large `.toml` file whose keys change between builds. Instead of hardcoding a settings form, Xenia Manager **reads the structure of your installed build's config file and builds the UI dynamically** - so the page always matches the emulator you actually have.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/xenia-settings.png`
-    **Capture:** Xenia Settings page with categories and several settings visible.
-    **Replace with:** `![Xenia Settings](assets/images/xenia-settings.png)`
+![Xenia Settings](../assets/desktop/Xenia_Settings.png)
 
 ---
 
@@ -38,10 +35,7 @@ The file picker at the top lists emulator configs first, then per-game titles. *
 
 ## Optimized Settings (Community Presets)
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/xenia-settings-optimized.png`
-    **Capture:** Xenia Settings page with the optimized-settings panel / Apply preset action visible.
-    **Replace with:** `![Optimized Settings](assets/images/xenia-settings-optimized.png)`
+![Optimized Settings](../assets/desktop/Xenia_Settings_Optimized.png)
 
 The [optimized-settings](https://github.com/xenia-manager/optimized-settings) database ships community-tested configurations per title:
 

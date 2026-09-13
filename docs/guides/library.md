@@ -6,10 +6,7 @@ icon: lucide/layout-grid
 
 The Library page is the home screen: your scanned games, their artwork, compatibility, playtime, and every per-game action (launch, edit, content, patches, settings, shortcuts).
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/library-main.png`
-    **Capture:** Library page in grid view with several games, artwork tiles visible.
-    **Replace with:** `![Game Library](assets/images/library-main.png)`
+![Game Library](../assets/desktop/Library_Main.png)
 
 ---
 
@@ -24,10 +21,7 @@ The Library page is the home screen: your scanned games, their artwork, compatib
     1. Embedded artwork from the game file itself (XDBF SPA icon, e.g. `0x8000`) when `Use embedded artwork` is on (default).
     2. Downloaded artwork from the marketplace database (`x360db`), cached under `Cache/Database/x360db/` and `Cache/Images/`.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/library-options.png`
-    **Capture:** Library Options panel (view toggle, sort, scan/add/remove controls).
-    **Replace with:** `![Library Options](assets/images/library-options.png)`
+![Library Options](../assets/desktop/Library_Options.png)
 
 ### Auto-detect and multi-disc
 
@@ -76,10 +70,7 @@ Toggle each column in settings: compatibility rating, playtime, Xenia version, l
 
 ## Right-Click Menu (Per-Game Actions)
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/library-right-click.png`
-    **Capture:** right-click context menu on a game tile showing Launch / Details / Settings / Content / Patches / Shortcut actions.
-    **Replace with:** `![Game context menu](assets/images/library-right-click.png)`
+![Game context menu](../assets/desktop/Library_Right_Click.png)
 
 Typical entries (availability depends on game state):
 
@@ -116,10 +107,7 @@ The badge colors map to these ratings: **Unknown**, **Unplayable**, **Loads**, *
 
 ## Game Details Editor
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/game-details-editor.png`
-    **Capture:** Game Details Editor dialog with title, IDs, artwork fields.
-    **Replace with:** `![Game Details Editor](assets/images/game-details-editor.png)`
+![Game Details Editor](../assets/desktop/Game_Details_Editor.png)
 
 Use this when a scan misidentifies a game or artwork is missing:
 
@@ -132,10 +120,7 @@ Changes save back to `games.json` immediately.
 
 ## Game Settings Editor
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/game-settings-editor.png`
-    **Capture:** Game Settings Editor dialog (per-game config overrides).
-    **Replace with:** `![Game Settings Editor](assets/images/game-settings-editor.png)`
+![Game Settings Editor](../assets/desktop/Game_Settings_Editor.png)
 
 This edits the **per-game configuration profile**: overrides that apply only to this title, leaving the global emulator config untouched. Typical uses:
 

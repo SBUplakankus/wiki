@@ -6,10 +6,7 @@ icon: lucide/cog
 
 The Manage page installs, updates, and repairs the actual emulator builds. Xenia Manager itself is only a launcher - the games run inside one of the Xenia variants installed here.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/manage-xenia.png`
-    **Capture:** Manage page showing Canary / Mousehook / Netplay rows with installed versions and Install/Update buttons.
-    **Replace with:** `![Manage Xenia](assets/images/manage-xenia.png)`
+![Manage Xenia](../assets/desktop/Manage_Xenia.png)
 
 ---
 

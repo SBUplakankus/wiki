@@ -8,10 +8,7 @@ icon: lucide/house
 
 Built with .NET 10 and Avalonia, with on-demand loading and caching for low resource usage.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/library-main.png`
-    **Capture:** full Library page in grid view with several games imported, showing artwork tiles.
-    **Replace with:** `![Game Library](assets/images/library-main.png)`
+![Game Library](assets/desktop/Library_Main.png)
 
 ---
 

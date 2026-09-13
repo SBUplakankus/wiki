@@ -6,10 +6,7 @@ icon: lucide/puzzle
 
 Game patches (60 FPS mods, bug fixes, enhancements, Netplay compatibility patches) come from two community databases and are managed per game. Xenia Manager downloads them and lets you add, edit, and remove entries in one unified window - including duplicate patch names for different patch versions.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/patch-downloader.png`
-    **Capture:** Patch Downloader window with available patches list for one game.
-    **Replace with:** `![Patch Downloader](assets/images/patch-downloader.png)`
+![Patch Downloader](../assets/desktop/Patch_Downloader.png)
 
 ---
 
@@ -45,10 +42,7 @@ Beyond downloading, the per-game Patches menu covers the full file lifecycle:
 
 ## Patch Configurator
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/patch-configurator.png`
-    **Capture:** Patch Configurator window with patch list, enable toggles, Add/Edit/Remove buttons.
-    **Replace with:** `![Patch Configurator](assets/images/patch-configurator.png)`
+![Patch Configurator](../assets/desktop/Patch_Configurator.png)
 
 The Configurator is the per-game patch manager:
 

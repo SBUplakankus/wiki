@@ -125,11 +125,12 @@ Output goes to `site/` (git-ignored). `--strict` fails on warnings - fix broken 
 ### Contributing to docs
 
 - Edit Markdown under `docs/`; add new pages to the `nav` array in `zensical.toml`.
+- Screenshots live in `docs/assets/` split by surface: `desktop/` for the desktop app, `bigscreen/` for BigScreen. Use BigScreen naming style (`Pascal_Case_With_Underscores.png`, e.g. `Manage_Profiles.png`). Reference them as `assets/desktop/<Name>.png` or `assets/bigscreen/<Name>.png` from `index.md`, or with a `../` prefix from any subfolder page.
 - Screenshot placeholders use this convention (greppable, renders as an info box):
     ```markdown
     !!! info "Screenshot needed"
-    **File:** `assets/images/<name>.png`
+    **File:** `assets/<Name>.png`
     **Capture:** what to capture.
-    **Replace with:** `![Alt](assets/images/<name>.png)`
+    **Replace with:** `![Alt](assets/<Name>.png)`
     ```
 - Run the strict build locally, then open a PR against `main` - `gh-pages` updates automatically on merge.

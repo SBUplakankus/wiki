@@ -6,10 +6,7 @@ icon: lucide/package
 
 Xenia Manager installs DLC and Title Updates (TU) **without launching Xenia**. It understands Xbox 360 content packages (STFS containers and related formats) and places them where the emulator expects them.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/install-content.png`
-    **Capture:** Install Content dialog (file picker / package list, installation-method selector).
-    **Replace with:** `![Install Content](assets/images/install-content.png)`
+![Install Content](../assets/desktop/Install_Content.png)
 
 ---
 
@@ -49,27 +46,42 @@ If installed DLC does not appear in-game and you used **Package file** mode, rei
 
 ## Content Viewer
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/content-viewer.png`
-    **Capture:** Content Viewer window listing installed DLC/TU entries for one game with sizes.
-    **Replace with:** `![Content Viewer](assets/images/content-viewer.png)`
-
-The Content Viewer shows everything installed for the selected game. It has separate views per data type - **Saved Games**, **Achievements**, **Title Updates**, and **Marketplace Content** (DLC) - each listing package names, Title IDs, sizes, and install locations. Use it to:
+The Content Viewer shows everything installed for the selected game, split into four views - one per data type. Each lists package names, Title IDs, sizes, and install locations. Use it to:
 
 - Verify an install actually landed where expected.
-- Remove individual DLC/TU entries without touching the rest.
+- Remove individual entries without touching the rest (**Delete All** clears the current view after confirmation).
 - Spot mismatches (content for Title ID `X` installed under game `Y` - usually a wrong-file mistake).
+- **Open Content Directory** reveals the underlying `{Content}/{XUID}/{TitleId}/` folder in Explorer.
 
-Removal deletes the content files from disk; your source packages elsewhere are untouched. **Delete All** removes every row in the current view after confirmation, and **Open Content Directory** reveals the underlying `{Content}/{XUID}/{TitleId}/` folder in Explorer.
+Removal deletes the content files from disk; your source packages elsewhere are untouched.
 
-Save import/export (`*.xsave` / `*.zip`) also lives in this dialog - see [Profiles & Saves](profiles-saves.md#import-and-export-saves) for the full flow.
+=== "Saved Games"
 
-### Achievements
+    ![Saved Games](../assets/desktop/Content_Viewer_Saved_Games.png)
 
-The **Achievements** view reads the game's GPD (`{TitleId}.gpd`) for the selected profile. Beyond viewing, it can pull missing data straight from your game files and toggle unlock state:
+    Per-profile save data for the selected game. Save import/export (`*.xsave` / `*.zip`) lives in this view - see [Profiles & Saves](profiles-saves.md#import-and-export-saves) for the full flow.
 
-- **Fetch Achievements from Game Files** - builds a missing `{TitleId}.gpd` (plus the profile entry in `FFFE07D1.gpd`) from the SPA data embedded in the disc. Works with ISO/XISO, SVOD, STFS, XEX, and ZAR sources. Missing entries are added; existing entries and unlock state are left untouched. Strings follow the profile's console language with fallback to the SPA default.
-- **Fetch from Game Files** - refreshes an existing GPD from the disc (multi-disc games ask which disc to read first). Pick one per run: **Missing images**, **Unlocked images only**, **Overwrite all images**, or **Achievement strings** (names/descriptions).
+=== "Achievements"
+
+    ![Achievements](../assets/desktop/Content_Viewer_Achievements.png)
+
+    The **Achievements** view reads the game's GPD (`{TitleId}.gpd`) for the selected profile. Beyond viewing, it can pull missing data straight from your game files and toggle unlock state:
+
+    - **Fetch Achievements from Game Files** - builds a missing `{TitleId}.gpd` (plus the profile entry in `FFFE07D1.gpd`) from the SPA data embedded in the disc. Works with ISO/XISO, SVOD, STFS, XEX, and ZAR sources. Missing entries are added; existing entries and unlock state are left untouched. Strings follow the profile's console language with fallback to the SPA default.
+    - **Fetch from Game Files** - refreshes an existing GPD from the disc (multi-disc games ask which disc to read first). Pick one per run: **Missing images**, **Unlocked images only**, **Overwrite all images**, or **Achievement strings** (names/descriptions).
+    - **Unlock / Lock** - toggles individual achievements (or all at once) in the GPD. Useful for testing or restoring state; takes effect next launch.
+
+=== "Title Updates"
+
+    ![Title Updates](../assets/desktop/Content_Viewer_Title_Updates.png)
+
+    Installed Title Update packages for the selected game. If DLC refuses to load in-game, check here first and confirm the matching TU is installed - several titles ignore DLC without it.
+
+=== "Marketplace Content"
+
+    ![Marketplace Content](../assets/desktop/Content_Viewer_Marketplace.png)
+
+    Installed DLC packages for the selected game. DLC is keyed by Title ID and region - content from another region/edition will list here but may not unlock in-game (see [Multi-Disc and Title ID Notes](#multi-disc-and-title-id-notes)).
 
 ### Screenshots and save backups
 

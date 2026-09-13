@@ -10,21 +10,21 @@ BigScreen recreates the feel of a modern console on your TV. These are the rules
 
 Exactly one thing is highlighted at all times. Move and the highlight moves. Confirm and it acts. Back and it steps out. Focus is never lost: closing anything returns you to where you came from.
 
-| ![Design Philosophy - Xbox Reference, Game Selected](../assets/Series_Starfield_Selected.png){ data-gallery="selection" } |
+| ![Design Philosophy - Xbox Reference, Game Selected](../assets/bigscreen/Series_Starfield_Selected.png){ data-gallery="selection" } |
 |---|
 | Xbox Series - Game Selected |
 
-| ![Dashboard - Game Selected](../assets/Dashboard_Box_Art.jpg){ data-gallery="selection" } |
+| ![Dashboard - Game Selected](../assets/bigscreen/Dashboard_Box_Art.jpg){ data-gallery="selection" } |
 |---|
 | Big Screen - Game Selected |
 
 The selected card grows while its neighbours settle. Nothing else on the row changes size or position. Same moment with nothing selected:
 
-| ![Design Philosophy - Xbox Reference, No Selection](../assets/Series_No_Selection.png){ data-gallery="selection" } |
+| ![Design Philosophy - Xbox Reference, No Selection](../assets/bigscreen/Series_No_Selection.png){ data-gallery="selection" } |
 |---|
 | Xbox Series - No Game Selected |
 
-| ![Dashboard - No Game Selected](../assets/Dashboard_No_Selection.jpg){ data-gallery="selection" } |
+| ![Dashboard - No Game Selected](../assets/bigscreen/Dashboard_No_Selection.jpg){ data-gallery="selection" } |
 |---|
 | Big Screen - No Game Selected |
 

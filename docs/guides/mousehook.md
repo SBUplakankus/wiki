@@ -6,10 +6,7 @@ icon: lucide/mouse
 
 [Xenia Mousehook](https://github.com/marinesciencedude/xenia-canary-mousehook) is the Xenia Canary fork with keyboard-and-mouse support. Xenia Manager integrates it: per-game variant assignment, bindings management, and a graphical controls editor backed by a compatibility database.
 
-!!! info "Screenshot needed"
-    **File:** `assets/images/mousehook-editor.png`
-    **Capture:** Mousehook Controls Editor dialog with key/mouse bindings list.
-    **Replace with:** `![Mousehook Controls Editor](assets/images/mousehook-editor.png)`
+![Mousehook Controls Editor](../assets/desktop/Mousehook_Editor.png)
 
 ---
 
