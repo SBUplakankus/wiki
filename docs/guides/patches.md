@@ -34,6 +34,15 @@ The Manager caches the patch lists under `Cache/Database/Patches/` and refreshes
 
 If no patches are listed, none are published for that title in the selected variant's database - the Configurator below is still available for hand-written patches.
 
+## Install Local, Add Additional, Export, Remove
+
+Beyond downloading, the per-game Patches menu covers the full file lifecycle:
+
+- **Install Local Patch** - pick a `.toml` patch file from disk. If its Title ID does not match the game (including alternative IDs), the Manager asks for confirmation before installing.
+- **Add Additional Patches** - merges entries from a second `.toml` file into the already-installed patch file. Requires a patch to already be installed; fails with an incompatibility message when the files do not match.
+- **Export Patch** - copies the game's current `.patch.toml` to a location you choose (save-file picker, `*.toml` / `*.patch.toml`). Shows a warning when no patch is installed.
+- **Remove Patches** - deletes the game's patch file via `PatchManager.RemovePatchAsync`.
+
 ## Patch Configurator
 
 !!! info "Screenshot needed"

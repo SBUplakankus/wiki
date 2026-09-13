@@ -31,7 +31,7 @@ The Library page is the home screen: your scanned games, their artwork, compatib
 
 ### Auto-detect and multi-disc
 
-- **Auto-detect new games** (on by default): when files appear in your games directory, the Manager can pick them up without a manual rescan. Toggle in [Manager Settings](manager-settings.md#library-behaviour).
+- **Auto-detect new games** (on by default): when files appear in your games directory, the Manager can pick them up without a manual rescan. A notification with a rescan action appears (short cooldown to avoid spam). Toggle in [Manager Settings](manager-settings.md#library-behaviour).
 - **Multi-disc games**: when two entries share a title but differ by disc (Media IDs), the Manager asks whether to merge them into one entry with a disc picker. Enable **Auto-merge multi-disc** to skip the prompt in the future.
 - The merged entry remembers `last_played_disc` - the disc-selection popup pre-selects the disc you launched last time.
 
@@ -86,14 +86,31 @@ Typical entries (availability depends on game state):
 - **Launch** - start the game with its assigned Xenia version. For multi-disc games, pick the disc first.
 - **Game Details Editor** - fix title, IDs, artwork (see below).
 - **Game Settings Editor** - per-game Xenia config overrides (see [Xenia Settings](xenia-settings.md#global-vs-per-game-settings)).
-- **Content Viewer / Install Content** - DLC and Title Updates (see [Content](content.md)).
-- **Patch Downloader / Patch Configurator** - game patches (see [Patches](patches.md)).
+- **Content Viewer** - separate views for Saved Games, Achievements, Title Updates, and Marketplace Content (see [Content](content.md#content-viewer)). Plus **View Screenshots** (opens `Emulators/<Variant>/screenshots/<TitleID>/` in Explorer; shows a notice when none exist) and **Open Save Backup Folder** (opens `Backup/<Title>/Game Saves/`, only when automatic backups exist).
+- **Install Content** - DLC and Title Updates (see [Content](content.md)).
+- **Patches** - Download, Install Local (`.toml` file), Add Additional, Configure, Export, and Remove (see [Patches](patches.md)).
 - **Mousehook Controls Editor** - only meaningful for Mousehook-assigned games (see [Mousehook](mousehook.md)).
-- **Create Steam shortcut** - see [Steam Shortcuts](steam-shortcuts.md).
+- **Create Desktop Shortcut / Create Steam Shortcut** - see [Steam Shortcuts](steam-shortcuts.md). Both are Windows-only and ask for a disc first on multi-disc games.
+- **Open Compatibility Page** - opens the compatibility database URL for the game when one is known.
+- **Manage Discs** - add, remove, or relabel discs in a merged multi-disc entry (changes save to `games.json`).
 - **Open folder / Reveal files** - jump to the game file, config, or emulator folder.
-- **Remove from library** - drops the entry from `games.json` (does not delete your game files).
+- **Remove from library** - drops the entry from `games.json`. A second prompt asks whether to also delete the game's installed content; your game files themselves are never deleted.
 
 Multi-select is supported for bulk operations; the toolbar shows the selected-games count.
+
+### Library toolbar extras
+
+Beyond scan/add/remove, the Library toolbar offers:
+
+- **Drag and drop** - drop `.iso` / `.xex` / `.zar` files directly onto the Library to add them (same pipeline as Add Game, including the Xenia-version picker for multi-variant setups).
+- **Export shortcuts** - bulk-create desktop `.lnk` files (folder picker) or Steam shortcuts for every selected game at once.
+- **Update compatibility ratings** - re-fetch ratings from the databases, with a picker for which set to refresh (game, Mousehook, Netplay).
+- **Update optimized settings** - bulk-apply community optimized settings to all per-game configs at once.
+- **Remove invalid games** - prune entries whose files no longer exist on disk.
+
+### Compatibility ratings
+
+The badge colors map to these ratings: **Unknown**, **Unplayable**, **Loads**, **Gameplay**, **Playable**. Mousehook-assigned games additionally show the Mousehook support rating, and Netplay games show Netplay status rows (public/tested-local/only-local/system-link). Ratings are advisory - hardware and game revision matter.
 
 ---
 

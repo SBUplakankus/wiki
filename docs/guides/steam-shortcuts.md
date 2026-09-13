@@ -2,9 +2,11 @@
 icon: lucide/monitor-play
 ---
 
-# Steam Shortcuts
+# Steam & Desktop Shortcuts
 
-Create Steam shortcuts for your games - with full artwork - so they launch from Steam, Big Picture, or Steam Input like native titles.
+Create Steam shortcuts for your games - with full artwork - so they launch from Steam, Big Picture, or Steam Input like native titles. Desktop shortcuts (`.lnk` files) are covered at the bottom.
+
+Both shortcut types are **Windows-only** (`SupportsShortcuts` is false on other platforms, hiding the menu entries) and ask for a disc first on multi-disc games.
 
 ---
 
@@ -38,3 +40,21 @@ Create Steam shortcuts for your games - with full artwork - so they launch from 
 - **Shortcut launches but the game does not start** - the per-game `xenia_version` may point at an uninstalled variant, or the game file moved. Launch the same game inside the Manager first; fix whatever error appears there.
 - **Artwork missing in Steam** - refresh Library artwork, then recreate the shortcut (Steam caches grid images aggressively; a client restart helps).
 - **Duplicate shortcuts** - created twice (e.g. before and after a rename). Remove the stale one in Steam; the Manager does not deduplicate Steam-side entries.
+
+---
+
+## Desktop Shortcuts (Windows-only)
+
+**Create Desktop Shortcut** writes a `<Game Title>.lnk` file to your Desktop. It targets `XeniaManager.exe` with the game title as argument (plus `--disc N` for multi-disc picks) and uses the game's icon for the shortcut image.
+
+Like Steam shortcuts, it stores absolute paths - recreate it after moving the Manager folder or the game files.
+
+## Launch arguments (what shortcuts run)
+
+Both shortcut types launch `XeniaManager.exe` with arguments parsed by the built-in CLI parser:
+
+- `--game "Exact Title"` - which library entry to start (a bare `"Title"` without the flag also works for legacy shortcuts).
+- `--disc N` (or `-d N`) - 1-based disc number for multi-disc games. Omitted → the disc picker appears.
+- `--xenia_args "..."` - raw extra arguments passed through to Xenia.
+
+Single-disc games launch directly; the loading screen, playtime tracking, and per-game config/patch handling behave exactly as in-manager launches.

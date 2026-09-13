@@ -90,7 +90,7 @@ Each variant gets its own `content/`, `config/`, `patches/`, `screenshots/`, con
 
     ***
 
-    Create Steam shortcuts with full artwork so games launch from Steam / Big Picture.
+    Create Steam shortcuts with full artwork so games launch from Steam / Big Picture. Desktop `.lnk` shortcuts (Windows-only) included.
 
     [:material-arrow-right: Steam Shortcuts](guides/steam-shortcuts.md)
 

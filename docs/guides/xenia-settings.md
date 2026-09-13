@@ -29,6 +29,8 @@ Workflow: get the game working with per-game overrides first, then promote value
 3. Change values; they save to the variant's config file.
 4. Relaunch the game. Most settings apply on next launch; a few require the emulator process to fully exit first (close the game window, not just return to the Manager).
 
+The file picker at the top lists emulator configs first, then per-game titles. **Save** writes the file, **Reset** restores defaults, **Optimize** (game configs only) opens community presets, and **Open in Editor** shells out to your text editor with a Notepad fallback.
+
 !!! warning
     Hand-editing the `.toml` in a text editor while the Manager is open can conflict with the dynamic UI - the Manager may overwrite your edits on save. Prefer the UI, or close the Manager before hand-editing and let it re-read the file on next launch.
 

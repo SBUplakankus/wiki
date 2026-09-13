@@ -34,7 +34,9 @@ Custom themes: copy `source/XeniaManager/Resources/Themes/Template.axaml` to a n
 
 ### Language
 
-The UI language selector. Translation files live in `source/XeniaManager/Resources/Language/` (`en.axaml` is the template; copy to `<code>.axaml` for a new language). To contribute a translation, follow the main repo's Translations Guide (summarized in [Development](../help/development.md#translations)) - do not hand-edit the in-code `SupportedLanguages` list; maintainers wire that up at release time.
+Shipped languages: English (`en`, default/fallback), Croatian (`hr`), Italian (`it`), Portuguese - Brazil (`pt-BR`), Russian (`ru`), Turkish (`tr`), Chinese - Simplified (`zh-CN`).
+
+Translation files live in `source/XeniaManager/Resources/Language/` (`en.axaml` is the template; copy to `<code>.axaml` for a new language). To contribute a translation, follow the main repo's Translations Guide (summarized in [Development](../help/development.md#translations)) - do not hand-edit the in-code `SupportedLanguages` list; maintainers wire that up at release time.
 
 ### Window and loading screen
 
@@ -76,7 +78,7 @@ Default off. When on, DLC/TU install to `Emulators/Content/` shared across varia
 
 ### Per-variant channels
 
-Stable vs. nightly toggles and installed versions are managed on the [Manage page](manage-xenia.md#stable-vs-nightly), not here - they are listed here only because the values persist in the same `config.json`.
+Stable vs. nightly channel and installed versions are managed on the [Manage page](manage-xenia.md#stable-vs-nightly-netplay-only), not here - they are listed here only because the values persist in the same `config.json`.
 
 ## Updates
 
@@ -86,6 +88,12 @@ Stable vs. nightly toggles and installed versions are managed on the [Manage pag
 | Use experimental build | off (on in experimental builds) | Track preview/experimental Manager releases instead of stable |
 
 When **Manager update available** is flagged, follow the prompt or reinstall from the releases page (see [Installation](../getting-started/installation.md#updating-xenia-manager)). Emulator updates are applied per variant on the [Manage page](manage-xenia.md#updates).
+
+## Debug
+
+| Setting | Default | What it does |
+| ------- | ------- | ------------ |
+| Log level | Info (`Trace` in experimental builds) | Verbosity of `Logs/` output: `Trace` / `Debug` / `Info` / `Warn` / `Error` / `Fatal` / `Off`. Raise to `Trace`/`Debug` when collecting logs for a bug report, then set it back. |
 
 ---
 

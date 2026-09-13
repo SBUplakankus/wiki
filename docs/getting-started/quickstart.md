@@ -23,7 +23,7 @@ If the window is blank, that is normal - you have not installed Xenia or added g
 
 1. Open the **Manage** page (sidebar → Manage).
 2. Pick a variant to start with: **Xenia Canary** is the recommended default. Add **Mousehook** if you want keyboard-and-mouse support, **Netplay** if you want online multiplayer.
-3. Click **Install / Download** for that variant. The Manager downloads the selected build (stable or nightly - see [Manage Xenia](../guides/manage-xenia.md#stable-vs-nightly)) into `Emulators/<Variant>/`.
+3. Click **Install / Download** for that variant. The Manager downloads the build (Netplay offers stable or nightly channels - see [Manage Xenia](../guides/manage-xenia.md#stable-vs-nightly-netplay-only)) into `Emulators/<Variant>/`.
 4. Wait until the version label shows an installed version number instead of "not installed".
 
 !!! info "Screenshot needed"

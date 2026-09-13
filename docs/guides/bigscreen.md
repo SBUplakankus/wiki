@@ -24,8 +24,13 @@ BigScreen is the fullscreen, controller-friendly launcher for TV / couch use. It
 - Browse the same Library (artwork grid, search/sort where exposed).
 - Launch games with their assigned variants - per-game settings, content, and patches apply exactly as in desktop mode.
 - Basic management (content/patch/settings access depends on version - the desktop app remains the full-featured surface).
+- BigScreen-exclusive views: the global **Gallery** (every screenshot from every installed variant in one grid, sortable/filterable) and the per-game **Screenshots** and **Achievements** panes in Game Details. On desktop there is no gallery viewer - right-click → View Screenshots just opens the screenshots folder (see [Content](content.md#screenshots-and-save-backups)).
 
 Prefer the desktop app for: first-time Xenia installation, patch editing, config tuning, profile/save surgery, and Steam shortcut creation. Use BigScreen for: launching and playing.
+
+### BigScreen settings
+
+The Settings screen covers: library layout (Carousel/List), card artwork (BoxArt/Icon), clock format (12h/24h), UI scale (25–200%), launch behavior (return to desktop on quit, fullscreen launches, start in BigScreen), profile rotation display, background (dynamic artwork / gradient / solid / custom image, accent color, vignette), controllers (list + primary), and per-version XConfig resolution. Profile management (create/rename/configure/delete/import/export) lives behind the profile row.
 
 > For how the BigScreen screens work internally (Dashboard, Library, navigation, modal stack), see the [BigScreen deep dive](../big-screen/overview.md).
 

@@ -54,13 +54,29 @@ If installed DLC does not appear in-game and you used **Package file** mode, rei
     **Capture:** Content Viewer window listing installed DLC/TU entries for one game with sizes.
     **Replace with:** `![Content Viewer](assets/images/content-viewer.png)`
 
-The Content Viewer shows everything installed for the selected game: package names, Title IDs, sizes, and install locations. Use it to:
+The Content Viewer shows everything installed for the selected game. It has separate views per data type - **Saved Games**, **Achievements**, **Title Updates**, and **Marketplace Content** (DLC) - each listing package names, Title IDs, sizes, and install locations. Use it to:
 
 - Verify an install actually landed where expected.
 - Remove individual DLC/TU entries without touching the rest.
 - Spot mismatches (content for Title ID `X` installed under game `Y` - usually a wrong-file mistake).
 
-Removal deletes the content files from disk; your source packages elsewhere are untouched.
+Removal deletes the content files from disk; your source packages elsewhere are untouched. **Delete All** removes every row in the current view after confirmation, and **Open Content Directory** reveals the underlying `{Content}/{XUID}/{TitleId}/` folder in Explorer.
+
+Save import/export (`*.xsave` / `*.zip`) also lives in this dialog - see [Profiles & Saves](profiles-saves.md#import-and-export-saves) for the full flow.
+
+### Achievements
+
+The **Achievements** view reads the game's GPD (`{TitleId}.gpd`) for the selected profile. Beyond viewing, it can pull missing data straight from your game files and toggle unlock state:
+
+- **Fetch Achievements from Game Files** - builds a missing `{TitleId}.gpd` (plus the profile entry in `FFFE07D1.gpd`) from the SPA data embedded in the disc. Works with ISO/XISO, SVOD, STFS, XEX, and ZAR sources. Missing entries are added; existing entries and unlock state are left untouched. Strings follow the profile's console language with fallback to the SPA default.
+- **Fetch from Game Files** - refreshes an existing GPD from the disc (multi-disc games ask which disc to read first). Pick one per run: **Missing images**, **Unlocked images only**, **Overwrite all images**, or **Achievement strings** (names/descriptions).
+
+### Screenshots and save backups
+
+Two related right-click actions are folder openers, not viewers:
+
+- **View Screenshots** opens `Emulators/<Variant>/screenshots/<TitleID>/` in Explorer. If the folder does not exist yet (no screenshots taken), the Manager shows a notice instead.
+- **Open Save Backup Folder** opens `Backup/<Title>/Game Saves/` in Explorer. It only exists when [automatic save backup](profiles-saves.md#manage-profiles) has run at least once.
 
 ---
 
