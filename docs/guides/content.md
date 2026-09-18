@@ -69,7 +69,7 @@ Removal deletes the content files from disk; your source packages elsewhere are 
 
     - **Fetch Achievements from Game Files** - builds a missing `{TitleId}.gpd` (plus the profile entry in `FFFE07D1.gpd`) from the SPA data embedded in the disc. Works with ISO/XISO, SVOD, STFS, XEX, and ZAR sources. Missing entries are added; existing entries and unlock state are left untouched. Strings follow the profile's console language with fallback to the SPA default.
     - **Fetch from Game Files** - refreshes an existing GPD from the disc (multi-disc games ask which disc to read first). Pick one per run: **Missing images**, **Unlocked images only**, **Overwrite all images**, or **Achievement strings** (names/descriptions).
-    - **Unlock / Lock** - toggles individual achievements (or all at once) in the GPD. Useful for testing or restoring state; takes effect next launch.
+    - **Unlock / Lock** - toggles individual achievements (or all at once) in the GPD. Useful for testing or restoring state; takes effect next launch. To inspect the files this reads, see [Browse Game Files](library.md#browse-game-files).
 
 === "Title Updates"
 

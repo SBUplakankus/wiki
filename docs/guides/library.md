@@ -84,7 +84,7 @@ Typical entries (availability depends on game state):
 - **Create Desktop Shortcut / Create Steam Shortcut** - see [Steam Shortcuts](steam-shortcuts.md). Both are Windows-only and ask for a disc first on multi-disc games.
 - **Open Compatibility Page** - opens the compatibility database URL for the game when one is known.
 - **Manage Discs** - add, remove, or relabel discs in a merged multi-disc entry (changes save to `games.json`).
-- **Open folder / Reveal files** - jump to the game file, config, or emulator folder.
+- **Browse Game Files** - open the in-app file explorer for the game's container (see [Browse Game Files](#browse-game-files)). Includes **Open in Explorer** to reveal the underlying file on disk.
 - **Remove from library** - drops the entry from `games.json`. A second prompt asks whether to also delete the game's installed content; your game files themselves are never deleted.
 
 Multi-select is supported for bulk operations; the toolbar shows the selected-games count.
@@ -102,6 +102,62 @@ Beyond scan/add/remove, the Library toolbar offers:
 ### Compatibility ratings
 
 The badge colors map to these ratings: **Unknown**, **Unplayable**, **Loads**, **Gameplay**, **Playable**. Mousehook-assigned games additionally show the Mousehook support rating, and Netplay games show Netplay status rows (public/tested-local/only-local/system-link). Ratings are advisory - hardware and game revision matter.
+
+---
+
+## Browse Game Files
+
+![Browse Game Files](../assets/desktop/Game_Files_Dialog.png)
+
+**Browse Game Files** (right-click a game → **Browse Game Files**) opens an in-app explorer for the game's files without leaving the Manager. For multi-disc games, pick the disc first. **Open in Explorer** in the dialog reveals the underlying file on disk.
+
+### Supported containers
+
+| Source | What opens |
+| ------ | ---------- |
+| Folder (extracted) | Browsed directly; SVOD folders are read as SVOD packages |
+| ISO / XISO | Browsed as disc image |
+| STFS (`CON`, `LIVE`, `PIRS`) | Browsed as package |
+| SVOD | Browsed as package |
+| ZAR | Browsed as archive |
+| XEX file | Opens the containing folder |
+
+The bottom card shows the detected format and totals (file count, total size). Files that are none of the above show a load error.
+
+### Browsing, search, and selection
+
+- **Tree** - folders first, full paths in tooltips. Double-click (or right-click → **Open**) previews a file; folders expand.
+- **Search** - filters by file name (case-insensitive), keeps parent folders visible and expands matches.
+- **Multi-select** - select several files/folders for bulk extract. The details pane only shows when exactly one file is selected.
+- **Details pane** - shows name, size, and path for the selected file. Images preview inline. XEX files show a summary (Title ID, Media ID, version, executable type, icon with **Save icon**). STFS packages show package details (display name, Title ID, content type, size).
+
+### File previews
+
+| File type | Behaviour |
+| --------- | --------- |
+| Text (`.txt`, `.ini`, `.cfg`, `.json`, `.log`, `.xml`) | Read-only viewer with detected encoding. Files over ~1 MB are not previewed. |
+| Images (`.png`, `.jpg`, `.jpeg`, `.bmp`) | Previewed inline in the details pane. |
+| XEX (`.xex`) | Opens the **XEX details** dialog (see below). |
+| GPD (`.gpd`) | Opens a read-only viewer with the achievements list and the raw entries table (namespace, ID, size). |
+| Nested container (STFS package inside the game) | Opens in a new Browse Game Files window. Temporary files are cleaned up afterwards. |
+
+Files over ~64 MB (other than text) are not previewed - extract them instead.
+
+### XEX details dialog
+
+![XEX details](../assets/desktop/Game_Files_Xex_Dialog.png)
+
+- **Executable details** - Title ID, Media ID, version, base version, executable type (Retail / Debug), disc number, image size, module flags. **Save icon** exports the embedded icon as PNG.
+- **SPA details** - title, default language, title type and version, achievement count, total gamerscore. Shown when the XEX contains embedded SPA data.
+- **Expanders** - Achievements (with language picker when several languages exist, lock/unlock toggle, per-achievement icon, name, description, gamerscore), Titles, Contexts, Properties, and StatsViews.
+
+### Extracting files
+
+1. Select files and/or folders (or nothing for **Extract all**).
+2. Choose **Extract** and pick a destination folder.
+3. A progress dialog shows the current file, `file n of m`, and done/failed counts. The dialog cannot be closed until the operation finishes.
+
+Extraction preserves folder structure. Failures are reported at the end with the first error shown.
 
 ---
 
