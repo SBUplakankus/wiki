@@ -5,8 +5,8 @@ site_description = "Wiki for Xenia Manager"
 
 copyright = "Copyright &copy; 2026 Xenia Manager"
 
-repo_url = "https://github.com/xenia-manager/wiki"
-repo_name = "xenia-manager/wiki"
+repo_url = "https://github.com/xenia-manager/xenia-manager"
+repo_name = "xenia-manager/xenia-manager"
 edit_uri = "edit/main/docs/"
 
 nav = [
