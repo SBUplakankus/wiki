@@ -8,7 +8,7 @@ BigScreen is the fullscreen, controller-first interface for Xenia Manager. It pu
 
 ## Dashboard
 
-Home. Your most recently played games in a row, Library, Gallery, Settings, and Quit beneath them, and your profile, clock, network, and controller status across the top. Selecting the profile chip switches profiles. An empty library shows a stub pointing you at adding games on desktop.
+Home. Your most recently played games in a row, Library, Gallery, Settings, and Quit beneath them, and your profile, clock, network, and controller status across the top. Selecting the profile chip opens the profile picker, where you switch profiles. An empty library shows a stub pointing you at adding games on desktop.
 
 | ![Dashboard - Game Selected](../assets/bigscreen/Dashboard_Box_Art.jpg){ data-gallery="overview" } |
 |---|

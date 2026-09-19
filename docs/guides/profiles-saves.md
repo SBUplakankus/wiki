@@ -14,7 +14,7 @@ Xenia (the emulator) has its own Xbox 360-style **profile** (gamertag container)
 
 - **Profile** - the emulator-side Xbox 360 profile (gamertag, settings, achievements state). Stored per emulator variant alongside its `xconfig.settings` and profile data.
 - **Save** - per-game save data, tied to a profile's **XUID** (Xbox User ID). Moving a save between profiles without fixing the XUID makes the game ignore or reject it - the Manager handles this on import/export.
-- **XUID** (`Emulator → Profile XUID`, default `"0"`) - the ID stamped on saves. Change it only when you know why (e.g. matching saves from another setup).
+- **XUID** (`Emulator → Profile XUID`, default `"B13EBABEBABEBABE"`) - the ID stamped on saves. Change it only when you know why (e.g. matching saves from another setup).
 
 ## Manage Profiles
 
@@ -23,7 +23,7 @@ Open profiles via the Manage page or Library context actions (exact entry point 
 - **Import** a profile from disk (e.g. from another PC or a backup) into the selected emulator variant.
 - **Export** the current profile to a file for safekeeping or transfer.
 - **Edit** profile basics (name and similar fields where supported).
-- **Automatic save backup** (`Emulator → Profile → Automatic save backup`, default off): when enabled, the Manager snapshots the profile's saves before launching/writing, so a corrupted save does not destroy hours of progress. Backups accumulate under `Backup/` - prune them occasionally.
+- **Automatic save backup** (`Emulator → Profile → Automatic save backup`, default off): when enabled, the Manager snapshots the profile's saves after the emulator exits, so a corrupted save does not destroy hours of progress. Backups accumulate under `Backup/` - prune them occasionally.
 
 !!! tip
     Enable **automatic save backup** before experimenting with patches, mods, or unstable builds. Those are the situations that most often corrupt saves.
@@ -32,12 +32,12 @@ Open profiles via the Manage page or Library context actions (exact entry point 
 
 Saves are managed per game:
 
-1. Select the game in the Library.
-2. Open the save import/export action.
-3. **Export**: writes the game's saves (with XUID metadata) to a folder/file you choose. Copy that to another PC or archive it.
-4. **Import**: reads a previously exported save, remaps the XUID to the current profile when needed, and places it where the emulator expects it.
+1. Find your game in the library, right click, **Content** → **Saved Game**.
+2. Select your profile and then right click on the files list..
+3. **Export Saves**: writes the game's saves (with XUID metadata) to a folder/file you choose. Copy that to another PC or archive it.
+4. **Import Saves**: reads a previously exported save, remaps the XUID to the current profile when needed, and places it where the emulator expects it.
 
-The Manager validates Title IDs on import - importing saves from game `A` into game `B` is refused rather than silently creating unreadable data.
+The Manager validates the save format on import (Title ID must be valid 8-character hex) - but it does not cross-check the save's game against the game you import into, so double-check you selected the right game first.
 
 ### Moving to a new PC
 

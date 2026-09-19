@@ -7,12 +7,12 @@ icon: lucide/download
 ## Prerequisites
 
 - **Windows 10 or later** (64-bit). Xenia Manager is a Windows app (`WinExe` target).
-- **[.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0)** - the Windows build is framework-dependent (`SelfContained=false`), so the runtime must be installed separately. Install the **Desktop** runtime (not just the base/console runtime), since the app has a graphical interface.
+- **[.NET 10 Runtime](https://dotnet.microsoft.com/download/dotnet/10.0)** - the Windows build is framework-dependent (`SelfContained=false`), so a .NET 10 runtime must be installed separately. The **Desktop** variant works (it includes the base runtime); the app is graphical, so install a runtime with desktop support.
 - Enough disk space for the manager plus at least one Xenia variant (each variant is a few hundred MB plus your games, content, and patches).
 - (Optional) **Steam** - only needed if you want to create Steam shortcuts (see [Steam Shortcuts](../guides/steam-shortcuts.md)).
 
 !!! tip
-    If Windows reports a missing `dotnet` runtime on launch, install the **.NET 10 Desktop Runtime** and try again. The Linux build story does not apply here - Xenia Manager targets Windows.
+    If Windows reports a missing `dotnet` runtime on launch, install a **.NET 10 runtime with desktop support** and try again. The Linux build story does not apply here - Xenia Manager targets Windows.
 
 ---
 
@@ -24,7 +24,7 @@ icon: lucide/download
 4. On first startup you will see the welcome/first-run flow - continue with the [Quickstart](quickstart.md) to install Xenia and add games.
 
 !!! note
-    Keep the whole extracted folder together. Moving only `XeniaManager.exe` without its `Config/`, `Emulators/`, `Cache/`, and `Logs/` folders will make the app recreate them as empty.
+    Keep the whole extracted folder together. Moving only `XeniaManager.exe` without its folders orphans your library and emulators - `Config/`, `Games/`, and `Logs/` are recreated as empty on launch, while `Emulators/` and `Cache/` only reappear once you install a variant or download artwork.
 
 ---
 

@@ -71,7 +71,7 @@ Default off. When on, DLC/TU install to `Emulators/Content/` shared across varia
 ### Profile settings
 
 - **Automatic save backup** (default off) - snapshot profile saves automatically. See [Profiles & Saves](profiles-saves.md#manage-profiles).
-- **Profile XUID** (default `"0"`) - ID stamped on saves. See [Profiles & Saves](profiles-saves.md#concepts). Do not change casually.
+- **Profile XUID** (default `"B13EBABEBABEBABE"`) - ID stamped on saves. See [Profiles & Saves](profiles-saves.md#concepts). Do not change casually.
 
 ### Per-variant channels
 
@@ -98,7 +98,7 @@ When **Manager update available** is flagged, follow the prompt or reinstall fro
 
 ![About Page](../assets/desktop/About_Page.png)
 
-Shows the Manager version, links to releases/issues/wiki, license (BSD-3), and credits for contributors, translators, research references, and libraries. Use the version string here verbatim when filing bug reports.
+Shows the Manager version, links to releases/issues/wiki, license (BSD-3-Clause), and credits for contributors, translators, research references, and libraries. Use the version string here verbatim when filing bug reports.
 
 ---
 

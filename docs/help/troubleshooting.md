@@ -12,7 +12,7 @@ Common problems and how to fix them. If you are stuck, please [open an issue](ht
 
 ### App does not start / missing `dotnet` error
 
-1. Install the **[.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0)** (the **Desktop** variant - the base runtime is not enough for a GUI app).
+1. Install a **[.NET 10 runtime with desktop support](https://dotnet.microsoft.com/download/dotnet/10.0)** (the **Desktop** variant includes it).
 2. Re-run `XeniaManager.exe`.
 3. If it still fails, check `Logs/` next to the executable for a startup exception, and confirm you extracted the **whole ZIP** (not just the exe).
 
@@ -39,7 +39,7 @@ Common problems and how to fix them. If you are stuck, please [open an issue](ht
 
 ### Only one game fails to launch
 
-1. Verify the game file still exists at its stored path (right-click → open folder). Moved/renamed files produce stale `games.json` entries - rescan and remove the dead entry.
+1. Verify the game file still exists at its stored path (Browse Game Files → Open in Explorer). Moved/renamed files produce stale `games.json` entries - rescan and remove the dead entry.
 2. Check the per-game `xenia_version` in the [Details editor](../guides/library.md#game-details-editor) - the game may target a variant you uninstalled.
 3. Temporarily clear per-game settings overrides and disable patches to isolate the cause, then re-add them one at a time.
 

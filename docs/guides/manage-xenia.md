@@ -23,7 +23,7 @@ You can install any combination - they coexist. Each game remembers which varian
 
 ### Custom builds
 
-**Custom** is not installed here - it is a per-game override pointing at any `.exe` on disk (set in the [Details editor](library.md#game-details-editor), stored as `CustomEmulatorExecutable`). At launch the Manager runs that exe directly from its own folder and **skips** managed config swapping, patch disable/restore, save backup, and playtime-adjacent config saves. Use it to pin a specific build for one game; prefer a managed variant for everything else.
+**Custom** is not installed here - it is a per-game override pointing at any `.exe` on disk (set in the [Details editor](library.md#game-details-editor), stored as `custom_emulator_executable`). At launch the Manager runs that exe directly from its own folder and **skips** managed config swapping, patch disable/restore, save backup, and playtime-adjacent config saves. Use it to pin a specific build for one game; prefer a managed variant for everything else.
 
 ## Emulator Folder Layout
 
@@ -88,9 +88,9 @@ Canary and Mousehook track a single channel each. The Netplay **current version*
 
 The Manage page also offers, per installed variant:
 
-- **Redownload** - re-download all installed emulator builds at once.
+- **Redownload** - re-downloads an installed emulator build. If several variants are installed, a picker asks which one to redownload.
 - **Clear shader cache** - deletes cached shaders when visuals glitch after an update.
-- **Export logs** - zips the logs for bug reports (same files as [Troubleshooting](../help/troubleshooting.md#logs)).
+- **Export logs** - copies the variant's `xenia.log` to a folder you choose (timestamped as `xenia-canary-<timestamp>.log`, `xenia-mousehook-<timestamp>.log`, or `xenia-netplay-<timestamp>.log` depending on the variant) for bug reports (same files as [Troubleshooting](../help/troubleshooting.md#logs)).
 - **Update SDL database** - re-downloads `gamecontrollerdb.txt` for every installed variant.
 - **Redownload bindings** (Mousehook only) - restores the default `bindings.ini`.
 
@@ -98,7 +98,7 @@ The Manage page also offers, per installed variant:
 
 ## Unified content folder: admin requirement
 
-The **Unified content folder** toggle requires running as **Administrator** on an **NTFS** drive (it works via symlinks; the toggle is disabled otherwise). Toggling never moves already-installed content - reinstall or move the folders manually, then verify in the Content Viewer.
+The **Unified content folder** toggle requires running as **Administrator** on an **NTFS** drive (it works via symlinks; the toggle is disabled otherwise). Toggling migrates your content automatically - unifying copies the selected variant's content into the shared folder and symlinks each variant to it, separating copies it back - after asking which variant's content to use as the base. Verify the result in the Content Viewer.
 
 ---
 

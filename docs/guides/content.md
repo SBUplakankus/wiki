@@ -12,12 +12,12 @@ Xenia Manager installs DLC and Title Updates (TU) **without launching Xenia**. I
 
 ## Where Content Lives: Unified vs. Per-Emulator
 
-Two modes, controlled by **Emulator → Unified content folder** ([Manager Settings](manager-settings.md#emulator)):
+Two modes, controlled by **Unified content folder** on the [Manage page](manage-xenia.md#settings-that-affect-this-page):
 
 - **Per-emulator (default, off)**: content goes into each variant's own folder, e.g. `Emulators/Xenia Canary/content/<TitleID>/...`. Use this when different variants need different content sets.
 - **Unified (on)**: content goes into `Emulators/Content/` shared by all variants. Use this to avoid storing the same 10 GB DLC three times for Canary + Mousehook + Netplay.
 
-Switching modes does not move already-installed content - reinstall or move the folders manually, then verify in the Content Viewer.
+Switching modes migrates your already-installed content automatically after a confirmation prompt (requires Administrator rights on an NTFS drive) - verify the result in the Content Viewer afterwards.
 
 ## Installation Method: Folder vs. Package File
 
@@ -34,12 +34,12 @@ If installed DLC does not appear in-game and you used **Package file** mode, rei
 
 ## Installing Content
 
-1. Select a game in the Library (content is always installed **for a specific title** - Title ID determines the destination folder).
-2. Open **Install Content** (right-click → Install Content, or the Content Viewer → Install).
+1. Open the **Manage** page and click **Install Content**. At least one emulator variant must be installed first.
+2. If several variants are installed and the unified content folder is off, pick which variant to install for (with unified mode on, one install covers all variants).
 3. Pick the package file(s) from disk (DLC / TU containers you dumped from your own console).
-4. Choose the installation method (**Extracted folder** unless you know your build supports package files).
-5. Confirm. The Manager parses the container, validates the Title ID matches the game, and copies/extracts it into the correct `content/<TitleID>/` tree.
-6. Launch the game - the content should be visible in-game (some titles require the latest TU before DLC unlocks).
+4. Choose the installation method (**Package files** unless you know your build doesn't support it yet).
+5. Confirm. The Manager parses the container and copies/extracts it into the `content/<xuid>/<TitleID>/` tree named by the package's own Title ID.
+6. Launch the game - the content should be visible in-game (some titles require the latest TU before DLC unlocks). Verify it landed via the Content Viewer (right-click the game → **Content** views).
 
 !!! tip
     Install the **Title Update first, then DLC**. Several games refuse to load DLC when the matching TU version is missing.
@@ -51,7 +51,7 @@ The Content Viewer shows everything installed for the selected game, split into 
 - Verify an install actually landed where expected.
 - Remove individual entries without touching the rest (**Delete All** clears the current view after confirmation).
 - Spot mismatches (content for Title ID `X` installed under game `Y` - usually a wrong-file mistake).
-- **Open Content Directory** reveals the underlying `{Content}/{XUID}/{TitleId}/` folder in Explorer.
+- **Open Content Directory** reveals the underlying `{Content}/{XUID}/{TitleId}/{ContentType}/` folder in Explorer.
 
 Removal deletes the content files from disk; your source packages elsewhere are untouched.
 
@@ -87,8 +87,8 @@ Removal deletes the content files from disk; your source packages elsewhere are 
 
 Two related right-click actions are folder openers, not viewers:
 
-- **View Screenshots** opens `Emulators/<Variant>/screenshots/<TitleID>/` in Explorer. If the folder does not exist yet (no screenshots taken), the Manager shows a notice instead.
-- **Open Save Backup Folder** opens `Backup/<Title>/Game Saves/` in Explorer. It only exists when [automatic save backup](profiles-saves.md#manage-profiles) has run at least once.
+- **Screenshots** opens `Emulators/<Variant>/screenshots/<TitleID>/` in Explorer. If the folder does not exist yet (no screenshots taken), the Manager shows a notice instead.
+- **Save Backups** opens `Backup/<Title>/Game Saves/` in Explorer. It only exists when [automatic save backup](profiles-saves.md#manage-profiles) has run at least once.
 
 ---
 
@@ -96,7 +96,7 @@ Two related right-click actions are folder openers, not viewers:
 
 - DLC is keyed by **Title ID**, not disc. For merged multi-disc entries, install once - all discs share it.
 - If two regions/editions of a game have different Title IDs, their content is **not** interchangeable. Match the DLC region to your dump's Title ID (visible in the [Details editor](library.md#game-details-editor)).
-- The Manager validates Title IDs on install, but it cannot validate region-specific incompatibilities beyond that - when in doubt, keep DLC from the same region as the game.
+- The Manager does not validate Title IDs on install and cannot validate region-specific incompatibilities - when in doubt, keep DLC from the same region as the game.
 
 ---
 

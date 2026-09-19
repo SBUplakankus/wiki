@@ -28,7 +28,7 @@ Start with **Xenia Canary** (best general compatibility). Add **Mousehook** for 
 
 ### Is it safe for my PC / saves?
 
-The Manager only writes inside its own folder (`Config/`, `Emulators/`, `Cache/`, `Backup/`, `Logs/`) plus Steam shortcuts when you ask for them. Still: enable **automatic save backup** before experimenting ([Profiles & Saves](../guides/profiles-saves.md#manage-profiles)), keep a copy of `Config/games.json`, and treat nightly emulator builds as unstable by definition.
+The Manager only writes inside its own folder (`Config/`, `Emulators/`, `Cache/`, `Downloads/`, `Backup/`, `Logs/`) plus Steam shortcuts when you ask for them. Still: enable **automatic save backup** before experimenting ([Profiles & Saves](../guides/profiles-saves.md#manage-profiles)), keep a copy of `Config/games.json`, and treat nightly emulator builds as unstable by definition.
 
 ---
 
@@ -36,7 +36,7 @@ The Manager only writes inside its own folder (`Config/`, `Emulators/`, `Cache/`
 
 ### Do I need the .NET runtime?
 
-Yes - install the **[.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0)**. The app is framework-dependent. If it refuses to start with a `dotnet`-missing error, you installed the wrong runtime variant (you need **Desktop**, not base). See [Installation](../getting-started/installation.md#prerequisites).
+Yes - install a **[.NET 10 runtime with desktop support](https://dotnet.microsoft.com/download/dotnet/10.0)**. The app is framework-dependent. If it refuses to start with a `dotnet`-missing error, you installed a runtime without desktop support (the **Desktop** variant includes it). See [Installation](../getting-started/installation.md#prerequisites).
 
 ### Is there an installer? Is it portable?
 
@@ -52,7 +52,7 @@ Yes, as long as you move the **whole folder** (exe + `Config/` + `Emulators/` + 
 
 ### Which game formats are supported?
 
-Disc images and extracted Xbox 360 formats handled by the built-in parsers (ISO, XEX, STFS/SVOD containers, GPD metadata, ZAR archives, and related containers). If a file will not parse here, Xenia itself would not boot it either - fix the dump. See [Library](../guides/library.md#scanning-and-adding-games).
+Disc images and extracted Xbox 360 formats handled by the built-in parsers (ISO/XISO, XEX, STFS/SVOD containers, ZAR archives, and related containers). If a file will not parse here, Xenia itself would not boot it either - fix the dump. See [Library](../guides/library.md#scanning-and-adding-games).
 
 ### Why is my game "Unknown Game"?
 
@@ -72,7 +72,7 @@ Tracked automatically on each launch and stored in `games.json`. Editing them by
 
 ### How do I install DLC / Title Updates?
 
-Per game via **Install Content**, without opening Xenia: [Content guide](../guides/content.md). Install the TU before the DLC, and match the DLC region to the game's Title ID.
+Via **Install Content** on the **Manage** page, without opening Xenia: [Content guide](../guides/content.md). Install the TU before the DLC, and match the DLC region to the game's Title ID.
 
 ### Where do I get patches? Why is my game missing from the list?
 

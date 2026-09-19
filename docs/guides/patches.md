@@ -14,19 +14,16 @@ Game patches (60 FPS mods, bug fixes, enhancements, Netplay compatibility patche
 
 | Database | Used by | Upstream |
 | -------- | ------- | -------- |
-| Canary patches | Xenia Canary and Mousehook | [xenia-canary/game-patches](https://github.com/xenia-canary/game-patches) (mirrored through the Manager database) |
-| Netplay patches | Xenia Netplay | Netplay patch collection (mirrored through the Manager database) |
+| Canary patches | Xenia Canary and Mousehook | [Canary patch collection](https://github.com/xenia-canary/game-patches) (mirrored through the Manager database) |
+| Netplay patches | Xenia Netplay | [Netplay patch collection](https://github.com/AdrianCassar/Xenia-WebServices/tree/main/patches) (mirrored through the Manager database) |
 
-The Manager caches the patch lists under `Cache/Database/Patches/` and refreshes them from the network. Patch files land in the variant's `patches/` folder (e.g. `Emulators/Xenia Canary/patches/` as `.patch.toml` files). Only patches in the folder of the variant the game actually launches with take effect.
-
-!!! note
-    Canary patches do not automatically apply to Netplay and vice versa. If you switch a game from Canary to Netplay, re-download that variant's patch set.
+The Manager caches the patch lists as `canary_patches.json` and `netplay_patches.json` under `Cache/Database/` and refreshes them from the network. Patch files land in the variant's `patches/` folder (e.g. `Emulators/Xenia Canary/patches/` as `.patch.toml` files). Only patches in the folder of the variant the game actually launches with take effect.
 
 ## Patch Downloader
 
 1. Select a game in the Library.
 2. Open the **Patch Downloader** (right-click → Patches → Download, or the patch window's download action).
-3. The list shows patches published for that game's Title ID / Media ID. Select the ones you want.
+3. The list shows patches published for that game's Title ID. Select the ones you want.
 4. Download. Files are written to the correct variant's `patches/` folder.
 
 If no patches are listed, none are published for that title in the selected variant's database - the Configurator below is still available for hand-written patches.
@@ -58,9 +55,9 @@ Changes apply the next time the game launches; no emulator restart beyond relaun
 
 ## Matching Rules (Why a Patch May Not Appear)
 
-Patches match on **Title ID and Media ID**. Common reasons a patch you expect is missing:
+Patches match on **Title ID** (local installs also accept the game's alternative IDs). Common reasons a patch you expect is missing:
 
-- The patch was published for a different Media ID (different disc/region/revision) than your dump. Check your IDs in the [Details editor](library.md#game-details-editor).
+- The patch was published for a different Title ID (different region/edition) than your dump. Check your IDs in the [Details editor](library.md#game-details-editor).
 - You are looking at the wrong variant's database (Canary list vs. Netplay list).
 - The local patch cache is stale - refresh/re-download the list.
 

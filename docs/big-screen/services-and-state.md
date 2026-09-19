@@ -49,6 +49,7 @@ Owns dashboard settings, saved as JSON under the app config folder. A missing or
 | Library layout | Carousel | Followed live by Dashboard and Library |
 | Card artwork | BoxArt | Flips every card live |
 | Clock format | TwelveHour | Header clock and capture dates |
+| UI scale | 100 | Interface size (25–200%) |
 | Pinned controller | absent | Hardware ID restored at boot |
 | Active profiles | empty | Saved profile per version, restored at boot |
 | Active version | absent | Version driving header and pickers |
@@ -62,7 +63,7 @@ Stats come from the profile file first with the per-game file as fallback. Score
 
 ## Settings Screen
 
-Top to bottom: profile management with one status line per installed version, library layout, card artwork, clock format, session toggles, background and appearance controls with the image picker, one row per connected controller, and Xbox version and resolution rows only when a system config file exists.
+Top to bottom: profile management with one status line per installed version, library layout, card artwork, clock format, UI scale, session toggles, background and appearance controls with the image picker, one row per connected controller, and Xbox version and resolution rows only when a system config file exists.
 
 | ![Settings - Theme Preferences](../assets/bigscreen/Theme_Settings.png){ data-gallery="settings" } |
 |---|

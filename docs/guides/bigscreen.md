@@ -27,7 +27,7 @@ Prefer the desktop app for: first-time Xenia installation, patch editing, config
 
 ### BigScreen settings
 
-The Settings screen covers: library layout (Carousel/List), card artwork (BoxArt/Icon), clock format (12h/24h), UI scale (25–200%), launch behavior (return to desktop on quit, fullscreen launches, start in BigScreen), profile rotation display, background (dynamic artwork / gradient / solid / custom image, accent color, vignette), controllers (list + primary), and per-version XConfig resolution. Profile management (create/rename/configure/delete/import/export) lives behind the profile row.
+The Settings screen covers: library layout (Carousel/List), card artwork (BoxArt/Icon), clock format (12h/24h), UI scale (25–200%), launch behavior (return to desktop on quit, fullscreen launches, start in BigScreen), profile rotation display, background (dynamic artwork / gradient / solid / custom image, accent color, vignette), controllers (list + primary), and per-version XConfig resolution. Profile management (create/rename/configure/delete/import/export) is the first Settings row and is also reachable from the profile picker.
 
 > For how the BigScreen screens work internally (Dashboard, Library, navigation, modal stack), see the [BigScreen deep dive](../big-screen/overview.md).
 
@@ -42,4 +42,3 @@ The Settings screen covers: library layout (Carousel/List), card artwork (BoxArt
 ## Troubleshooting
 
 - **BigScreen starts but games fail to launch** - diagnose in desktop mode where error output and logs are visible ([Troubleshooting](../help/troubleshooting.md#logs)), then return to BigScreen.
-- **Controller does not navigate BigScreen** - confirm Xenia's `gamecontrollerdb.txt` is present and your controller works in the desktop app first; BigScreen relies on the same SDL mapping pipeline.

@@ -31,7 +31,7 @@ Modals underneath the top hide their hint bars, so stacked prompts never show co
 |---|---|---|
 | Confirmation | true, false, null | Confirm, cancel, dismissed with back. Callers treat null as stay |
 | Disc selector | disc number or null | Null aborts the launch with nothing written |
-| Patch download | completion | Caller refreshes its cached entry and rebuilds rows |
+| Patch download | none - the caller refreshes unconditionally on return | Caller refreshes its cached entry and rebuilds rows |
 | Settings exit | save, discard, stay | Save writes, discard reloads from disk, stay keeps the pane open |
 
 The rule is always the same: set the result, then close. The generic channel guarantees the opener observes the value.

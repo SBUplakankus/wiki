@@ -38,7 +38,7 @@ Anything already on disk responds instantly. Opening a screen, sorting a list, o
 
 ## Gamepad First
 
-Every action is reachable on a controller through a fixed vocabulary: move, confirm, back, sort, details, switch view. Mouse and keyboard mirror all of it but never unlock anything extra. Typing in a text field pauses controller routing, except Back, which always escapes.
+Every action is reachable on a controller through a fixed vocabulary: move, confirm, back, start, sort, details, switch view. Mouse and keyboard mirror all of it but never unlock anything extra. Typing in a text field pauses keyboard routing, except Escape, which always exits; gamepad input still routes.
 
 ## Forgiving by Default
 

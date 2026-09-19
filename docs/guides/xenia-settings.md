@@ -21,15 +21,15 @@ Workflow: get the game working with per-game overrides first, then promote value
 
 ## Using the Page
 
-1. Pick the emulator variant at the top (Canary / Mousehook / Netplay). The form rebuilds for that build's config keys.
+1. Pick the emulator variant at the top (Canary / Mousehook / Netplay) in order to change default settings (settings that will be used by games when they are added) or pick the game you want to eddit settings for. The form rebuilds for that build's config keys.
 2. Browse categories (display, GPU, audio, input, storage, etc.). Every control maps to a real `.toml` key - hovering/tooltips show the key where available.
 3. Change values; they save to the variant's config file.
-4. Relaunch the game. Most settings apply on next launch; a few require the emulator process to fully exit first (close the game window, not just return to the Manager).
+4. Launch the game or emulator.
 
 The file picker at the top lists emulator configs first, then per-game titles. **Save** writes the file, **Reset** restores defaults, **Optimize** (game configs only) opens community presets, and **Open in Editor** shells out to your text editor with a Notepad fallback.
 
 !!! warning
-    Hand-editing the `.toml` in a text editor while the Manager is open can conflict with the dynamic UI - the Manager may overwrite your edits on save. Prefer the UI, or close the Manager before hand-editing and let it re-read the file on next launch.
+    Hand-editing the `.toml` in a text editor while the Manager is open can conflict with the dynamic UI - the Manager may overwrite your edits on save. When you use `Open In Editor` option, after making your edits and saving, close the editor and reselect your game (select some other config in the dropdown at the top and then select your previously selected config that you edited in editor in order for UI to update).
 
 ---
 
@@ -52,7 +52,7 @@ Presets are cached under `Cache/Database/` and refreshed from the network. They 
 
 Per variant (see [Manage Xenia](manage-xenia.md#emulator-folder-layout)):
 
-- `Emulators/<Variant>/<name>.config.toml` - default config shipped with the build.
+- `Emulators/<Variant>/<name>.config.toml` - default config that Xenia Manager constantly swaps and is loaded by Xenia emulator.
 - `Emulators/<Variant>/config/<name>.config.toml` - active config the Manager edits.
 - Per-game overrides - stored alongside the game entry and merged at launch.
 
